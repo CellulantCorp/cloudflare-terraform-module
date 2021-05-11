@@ -1,0 +1,55 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+    - id: detect-aws-credentials
+    - id: detect-private-key
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
+    - id: check-executables-have-shebangs
+    - id: check-symlinks
+    - id: check-yaml
+    - id: check-json
+    - id: check-added-large-files
+- repo: https://github.com/pre-commit/mirrors-yapf
+  rev: v0.31.0
+  hooks:
+  - id: yapf
+- repo: https://github.com/detailyang/pre-commit-shell
+  rev: 1.0.5
+  hooks:
+  - id: shell-lint
+    # args: [--format=json]
+- repo: https://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.48.0
+  hooks:
+  - id: terraform_fmt
+  - id: terragrunt_fmt
+  - id: terraform_docs
+  #- id: terraform_docs_replace
+  #  args: ['--with-aggregate-type-defaults', '--sort-inputs-by-required']
+  - id: terraform_validate
+  - id: terraform_tflint
+    args:
+      - 'args=--deep'
+      - 'args=--enable-rule=terraform_documented_variables'
+  - id: terraform_tfsec
+
+- repo: https://github.com/jumanjihouse/pre-commit-hooks
+  rev: 2.1.5
+  hooks:
+    #- id: bundler-audit
+    #- id: check-mailmap
+    #- id: fasterer
+    #- id: forbid-binary
+    #- id: forbid-space-in-indent
+    #- id: git-check  # Configure in .gitattributes
+    #- id: git-dirty  # Configure in .gitignore
+    #- id: markdownlint # Configure in .mdlrc
+    #- id: reek
+    #- id: require-ascii
+    #- id: rubocop
+    #- id: script-must-have-extension
+    #- id: script-must-not-have-extension
+    - id: shellcheck
+    - id: shfmt
