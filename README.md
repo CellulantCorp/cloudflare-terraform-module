@@ -1,4 +1,4 @@
-# Cloudflare DNS Record Module
+# Cloudflare DNS Record Module [.](https://www.geekandi.com/2018/11/10/cloudflare-terraform-dns-records/) | [.](https://gitlab.com/geekandi-terraform/cloudflare-dns-record-module)
 
 Terraform [cloudflare_record](https://www.terraform.io/docs/providers/cloudflare/r/record.html)
 
