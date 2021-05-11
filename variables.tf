@@ -4,6 +4,13 @@ variable "domain" {
 variable "zone_id" {
 }
 
+variable "tingg_me_api_token" {
+}
+
+# Required
+variable "tingg_me_zone_id" {
+}
+
 # still need to figure out SRV and LOC records
 
 # name, value, priority (integer), type, proxied
