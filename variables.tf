@@ -8,6 +8,11 @@ variable "zone_id" {
   description = "cloudflare zone id"
 }
 
+variable "api_token" {
+  type        = string
+  description = "cloudflare api token"
+}
+
 # still need to figure out SRV and LOC records
 
 # name, value, priority (integer), type, proxied
