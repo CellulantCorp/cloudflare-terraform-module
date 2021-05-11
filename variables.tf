@@ -1,7 +1,11 @@
 variable "domain" {
+  type        = string
+  description = "zone domain name"
 }
 
 variable "zone_id" {
+  type        = string
+  description = "cloudflare zone id"
 }
 
 # still need to figure out SRV and LOC records
